@@ -161,6 +161,11 @@
     }
     #itemsWork.col3 .hover-bg .hover-text { height: 100%}
     #en-team .hover-bg .hover-text.off small{ display: none;}
+    .whatsapp-button {
+        width:45px;
+        height:45px;
+        font-size:31px;
+    }
 }
 
 @media (max-width: 320px) { 
