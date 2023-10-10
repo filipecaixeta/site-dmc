@@ -213,7 +213,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Nome *"
+                                    <input type="text" autocomplete="off" class="form-control validate" placeholder="Nome *"
                                         name="nome" required
                                         data-validation-required-message="Por favor digite seu nome.">
                                     <p class="help-block text-danger"></p>
@@ -221,7 +221,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="email" autocomplete="off" class="form-control" placeholder="Email *"
+                                    <input type="email" autocomplete="off" class="form-control validate" placeholder="Email *"
                                         name="email" required
                                         data-validation-required-message="Por favor digite seu email.">
                                     <p class="help-block text-danger"></p>
@@ -231,7 +231,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" autocomplete="off" class="form-control" placeholder="Telefone *"
+                                    <input type="text" autocomplete="off" class="form-control validate" placeholder="Telefone *"
                                         name="telefone" required
                                         data-validation-required-message="Por favor digite seu telefone.">
                                     <p class="help-block text-danger"></p>
@@ -434,34 +434,7 @@
     <!-- Javascripts
     ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
-    <script>
-        $("form").submit(function (e) {
-            // 
-            var formData = new Object();
-            $(".form").serializeArray().map(function (x) {
-                formData[x.name] = x.value;
-            });
-            $.ajax({
-                    type: "POST",
-                    url: "https://jbur6br2fe.execute-api.us-west-2.amazonaws.com/dev".replace("dev",
-                        "prod"),
-                    data: JSON.stringify(formData),
-                    contentType: 'application/json',
-                })
-                .done(function () {
-                    $("#success").text("Sua mensagem foi enviada com sucesso")
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-873982630/ZpGMCKX-5sMDEKbV36AD'
-                    });
-                })
-                .fail(function () {
-                    $("#success").text(
-                        "Houve um erro no envio da sua mensagem. Por favor entre em contato pelo email")
-                });
-            e.preventDefault();
-            return false;
-        });
-    </script>
+    <script type="text/javascript" src="js/validade.js"></script>
 </body>
 
 </html>
