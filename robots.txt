@@ -6,7 +6,5 @@ Allow: /servicos.html
 Allow: /escaneamentoalaser.html
 Allow: /clientes.html
 Allow: /topografando.html
-Allow: /areadocliente.html
 Allow: /contato.html
-Disallow: /faq.html
 Sitemap: http://www.dmcgeoengenharia.com.br/sitemap.xml
